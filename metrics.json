@@ -1,0 +1,137 @@
+{
+  "splits": {
+    "train": 33619,
+    "validation": 3736,
+    "test": 4151
+  },
+  "class_distribution": {
+    "train": {
+      "Negative": 8069,
+      "Positive": 9303,
+      "Neutral": 16247
+    },
+    "validation": {
+      "Neutral": 1813,
+      "Negative": 906,
+      "Positive": 1017
+    },
+    "test": {
+      "Negative": 1006,
+      "Positive": 1150,
+      "Neutral": 1995
+    }
+  },
+  "label_mapping": {
+    "Negative": 0,
+    "Neutral": 1,
+    "Positive": 2
+  },
+  "results": {
+    "majority": {
+      "macro_f1": 0.2164,
+      "accuracy": 0.4806,
+      "per_class_f1": {
+        "Negative": 0.0,
+        "Neutral": 0.6492,
+        "Positive": 0.0
+      },
+      "confusion_matrix": [
+        [
+          0,
+          1006,
+          0
+        ],
+        [
+          0,
+          1995,
+          0
+        ],
+        [
+          0,
+          1150,
+          0
+        ]
+      ]
+    },
+    "logistic_regression": {
+      "macro_f1": 0.6887,
+      "accuracy": 0.7099,
+      "per_class_f1": {
+        "Negative": 0.6008,
+        "Neutral": 0.7586,
+        "Positive": 0.7067
+      },
+      "confusion_matrix": [
+        [
+          547,
+          353,
+          106
+        ],
+        [
+          192,
+          1606,
+          197
+        ],
+        [
+          76,
+          280,
+          794
+        ]
+      ],
+      "best_C": 2.0
+    },
+    "multinomial_nb": {
+      "macro_f1": 0.5856,
+      "accuracy": 0.6572,
+      "per_class_f1": {
+        "Negative": 0.3713,
+        "Neutral": 0.7337,
+        "Positive": 0.6517
+      },
+      "confusion_matrix": [
+        [
+          241,
+          688,
+          77
+        ],
+        [
+          35,
+          1832,
+          128
+        ],
+        [
+          16,
+          479,
+          655
+        ]
+      ]
+    },
+    "linear_svc": {
+      "macro_f1": 0.6862,
+      "accuracy": 0.7034,
+      "per_class_f1": {
+        "Negative": 0.6066,
+        "Neutral": 0.7487,
+        "Positive": 0.7034
+      },
+      "confusion_matrix": [
+        [
+          582,
+          319,
+          105
+        ],
+        [
+          239,
+          1540,
+          216
+        ],
+        [
+          92,
+          260,
+          798
+        ]
+      ]
+    }
+  },
+  "transformer_stretch": "skipped: distilbert fine-tuning on 33k rows is too slow on CPU-only; TF-IDF baselines are the honest comparison here"
+}
